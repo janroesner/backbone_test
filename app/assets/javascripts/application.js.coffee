@@ -12,9 +12,7 @@
 
 require ['jquery', 'underscore', 'backbone', 'app'], ($, _, Backbone, App) ->
 
-  # Start up the app once the DOM is ready
   $ ->
-    window.App = new App()
     Backbone.history.start
       pushState: true
-    window.App.start()
+    (new App()).start()

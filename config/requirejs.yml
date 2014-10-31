@@ -1,0 +1,6 @@
+paths:
+  handlebars: 'handlebars_hacked'
+shim:
+  handlebars:
+    deps: []
+    exports: 'Handlebars'
