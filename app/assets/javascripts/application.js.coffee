@@ -10,7 +10,7 @@
 # Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 # about supported directives.
 
-require ['jquery', 'underscore', 'backbone', 'app'], ($, _, Backbone, App) ->
+require ['handlebars', 'jquery', 'underscore', 'backbone', 'app'], (Handlebars, $, _, Backbone, App) ->
 
   $ ->
     Backbone.history.start

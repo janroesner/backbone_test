@@ -29,6 +29,7 @@ gem 'spring',        group: :development
 gem 'requirejs-rails'
 gem 'handlebars_assets'
 gem 'hamlbars', '~> 2.0'
+gem 'debugger'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
