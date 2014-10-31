@@ -15,4 +15,4 @@ require ['handlebars', 'jquery', 'underscore', 'backbone', 'app'], (Handlebars, 
   $ ->
     Backbone.history.start
       pushState: true
-    (new App()).start()
+    (new App()).render()

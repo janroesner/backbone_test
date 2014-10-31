@@ -1,16 +1,10 @@
-define ['collections/books_collection', 'handlebars', 'views/test_view'], (BooksCollection, Handlebars, TestView) ->
+define ['collections/books_collection', 'handlebars', 'views/books_collection_view'], (BooksCollection, Handlebars, BooksCollectionView) ->
 
-  class App extends Backbone.Model
+  class App
 
-    initialize: ()->
-      @books = new BooksCollection()
-      @listenTo @books, 'sync', @doStuff
+    render: ->
+      $('body').append (new BooksCollectionView()).render().el
 
-    start: ->
-      @books.fetch()
-
-    doStuff: ->
-      console.log "!!!!!!!!!!! synced: ", @books.models
-      testView = new TestView()
+      @
 
   App

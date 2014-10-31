@@ -1,1 +1,2 @@
-#bar.foo I am a template
+#books.books
+  %ul.list
