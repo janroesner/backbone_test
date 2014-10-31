@@ -3,7 +3,7 @@ define ['collections/books_collection', 'handlebars', 'views/books_collection_vi
   class App
 
     render: ->
-      $('body').append (new BooksCollectionView()).render().el
+      $('body').append (new BooksCollectionView()).el
 
       @
 
