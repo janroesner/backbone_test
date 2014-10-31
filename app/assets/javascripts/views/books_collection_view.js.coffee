@@ -11,8 +11,9 @@ define [
   class BooksCollectionView extends Backbone.View
     model: Book
 
+    collection: new BooksCollection()
+
     initialize: ->
-      @collection = new BooksCollection()
       @listenTo @collection, 'sync', @render
       @collection.fetch()
 

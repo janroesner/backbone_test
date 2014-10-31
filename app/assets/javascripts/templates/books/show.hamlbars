@@ -1,1 +1,3 @@
-{{author}} - {{name}} - {{age}}
+%span.author {{author}}
+%span.name {{name}}
+%span.age {{age}}
