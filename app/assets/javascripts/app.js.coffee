@@ -1,10 +1,14 @@
-define ['collections/books_collection', 'handlebars', 'views/books_collection_view'], (BooksCollection, Handlebars, BooksCollectionView) ->
+define ['backbone', 'routers/main_router'], (Backbone, MainRouter) ->
 
-  class App
+  class App extends Backbone.Model
 
-    render: ->
-      $('body').append (new BooksCollectionView()).el
+    initialize: ->
+      @mainRouter = new MainRouter()
+      Backbone.history.start
+        pushState: true
 
-      @
+    run: ->
+      @mainRouter.navigate '/',
+        trigger: true
 
   App
