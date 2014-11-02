@@ -14,11 +14,18 @@ define [
     collection:
       @collection = new BooksCollection()
 
+    template: JST['books/index']
+
+    events:
+      'click .new-book': 'new'
+
     initialize: ->
       @listenTo @collection, 'sync', @render
       @collection.fetch()
 
-    template: JST['books/index']
+    new: (e)->
+      e.preventDefault()
+      console.log "new clicked"
 
     render: ->
       @$el.html @template()
