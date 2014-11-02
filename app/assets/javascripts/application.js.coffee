@@ -10,7 +10,7 @@
 # Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 # about supported directives.
 
-require ['handlebars', 'jquery', 'underscore', 'backbone', 'app'], (Handlebars, $, _, Backbone, App) ->
+require ['app'], (App) ->
 
   $ ->
     (new App()).run()

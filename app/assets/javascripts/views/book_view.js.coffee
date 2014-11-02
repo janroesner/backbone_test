@@ -1,12 +1,12 @@
-define ['backbone', 'models/book', 'templates/books/show'], (Backbone, Book)->
+define ['backbone', 'models/book', 'templates/books/book'], (Backbone, Book)->
 
   class BookView extends Backbone.View
 
     tagName: 'li'
 
-    template: JST['books/show']
+    template: JST['books/book']
 
-    render: =>
+    render: ->
       @$el.html @template @model.attributes
 
       @
