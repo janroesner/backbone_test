@@ -1,15 +1,15 @@
-define ['backbone', 'routers/main_router'], (Backbone, MainRouter) ->
+define ['backbone', 'routers/main_router', 'helpers/global'], (Backbone, MainRouter, Global) ->
 
   class App extends Backbone.Model
 
     initialize: ->
-      @mainRouter = new MainRouter()
+      Global().mainRouter = new MainRouter()
       Backbone.history.start
         pushState: true
 
     run: ->
       if @should_run()
-        @mainRouter.navigate '/',
+        Global().mainRouter.navigate '/',
           trigger: true
 
     should_run: ->

@@ -5,8 +5,9 @@ define [
   'collections/books_collection',
   'models/book',
   'views/book_view',
-  'templates/books/index'],
-(_, Handlebars, Backbone, BooksCollection, Book, BookView)->
+  'templates/books/index',
+  'helpers/global'],
+(_, Handlebars, Backbone, BooksCollection, Book, BookView, template, Global)->
 
   class BooksCollectionView extends Backbone.View
     model: Book
@@ -25,7 +26,8 @@ define [
 
     new: (e)->
       e.preventDefault()
-      console.log "new clicked"
+      Global().mainRouter.navigate '/new',
+        trigger: true
 
     render: ->
       @$el.html @template()

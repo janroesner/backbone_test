@@ -4,10 +4,9 @@ define ['backbone', 'views/books_collection_view'], (Backbone, BooksCollectionVi
 
     routes:
       '':      'home'
-      '/':     'home'
-      '/new':  'new'
-      '/edit': 'edit'
-      '/show': 'show'
+      'new':  'new'
+      'edit': 'edit'
+      'show': 'show'
 
     home: ->
       $('body').append (new BooksCollectionView()).el
