@@ -1,2 +1,4 @@
 #books.books
   %ul.list
+  .actions
+    %input.new-book{ type: 'submit', value: 'Neues Buch' }
