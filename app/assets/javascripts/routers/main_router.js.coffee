@@ -1,4 +1,8 @@
-define ['backbone', 'views/books_collection_view'], (Backbone, BooksCollectionView)->
+define [
+  'backbone',
+  'views/books_collection_view',
+  'views/book_form'
+], (Backbone, BooksCollectionView, BookForm)->
 
   class MainRouter extends Backbone.Router
 
@@ -9,10 +13,11 @@ define ['backbone', 'views/books_collection_view'], (Backbone, BooksCollectionVi
       'show': 'show'
 
     home: ->
-      $('body').append (new BooksCollectionView()).el
+      $('body').html (new BooksCollectionView()).el
 
     new: ->
       console.log "routing to new"
+      $('body').html (new BookForm).render().el
 
     edit: ->
       console.log "routing to edit"

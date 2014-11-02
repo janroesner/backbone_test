@@ -1,3 +1,4 @@
+%h1 Listing books
 #books.books
   %ul.list
   .actions

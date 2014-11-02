@@ -1,0 +1,6 @@
+%h1 New book
+%form
+  %input#name{ type: 'text', placeholder: 'Name' }
+  %input#author{ type: 'text', placeholder: 'Author' }
+  %input#age{ type: 'text', placeholder: 'Alter' }
+  %input{ type: 'submit', value: 'Speichern' }
