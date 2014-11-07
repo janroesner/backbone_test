@@ -21,7 +21,7 @@ define [
       'click .new-book': 'new'
 
     initialize: ->
-      @listenTo @collection, 'sync', @render
+      @listenTo @collection, 'sync, add', @render
       @collection.fetch()
 
     new: (e)->

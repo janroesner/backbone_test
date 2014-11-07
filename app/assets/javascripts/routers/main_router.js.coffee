@@ -7,22 +7,26 @@ define [
   class MainRouter extends Backbone.Router
 
     routes:
-      '':      'home'
+      '':     'home'
       'new':  'new'
       'edit': 'edit'
       'show': 'show'
 
     home: ->
-      $('body').html (new BooksCollectionView()).el
+      $('body').html @getBooksCollectionView().el
 
     new: ->
-      console.log "routing to new"
-      $('body').html (new BookForm).render().el
+      $('body').html (new BookForm(collection: @getBooksCollectionView().collection)).render().el
 
     edit: ->
       console.log "routing to edit"
 
     show: ->
       console.log "routing to show"
+
+    # helpers
+
+    getBooksCollectionView: ->
+      @booksCollectionView ||= new BooksCollectionView()
 
   MainRouter
