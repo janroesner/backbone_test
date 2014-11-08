@@ -14,6 +14,7 @@ define [
 
     home: ->
       $('body').html @getBooksCollectionView().el
+      @getBooksCollectionView().delegateEvents()
 
     new: ->
       $('body').html (new BookForm(collection: @getBooksCollectionView().collection)).render().el
@@ -27,6 +28,6 @@ define [
     # helpers
 
     getBooksCollectionView: ->
-      @booksCollectionView ||= new BooksCollectionView()
+      @booksCollectionView ||= (new BooksCollectionView())
 
   MainRouter
