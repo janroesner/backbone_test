@@ -4,3 +4,4 @@
   %input#author{ type: 'text', placeholder: 'Author' }
   %input#age{ type: 'text', placeholder: 'Alter' }
   %input#submit{ type: 'submit', value: 'Speichern' }
+%a#cancel{ href: '' } Cancel
