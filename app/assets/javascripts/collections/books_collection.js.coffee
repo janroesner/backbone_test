@@ -5,9 +5,7 @@ define ['backbone', '../models/book'], (Backbone, Book)->
 
     url: '/books'
 
-    persist: (data)->
-      book = new Book(data)
-      book.save()
-      @add book
+    persist: (object)->
+      @add(object).save()
 
   BooksCollection

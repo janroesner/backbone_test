@@ -1,4 +1,4 @@
-define ['backbone', 'helpers/global', 'templates/books/form'], (Backbone, Global, Book, template)->
+define ['backbone', 'helpers/global', 'templates/books/form'], (Backbone, Global, template)->
 
   class BookForm extends Backbone.View
 
