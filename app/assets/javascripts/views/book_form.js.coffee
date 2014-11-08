@@ -6,11 +6,16 @@ define ['backbone', 'helpers/global', 'templates/books/form'], (Backbone, Global
 
     events:
       'click #submit': 'addBookToCollection'
+      'click #cancel': 'cancel'
 
     addBookToCollection: (e)->
       e.preventDefault()
       @collection.persist @serialize()
-      Global().mainRouter.navigate '/', trigger: true
+      Global().mainRouter.navigate '', trigger: true
+
+    cancel: (e)->
+      e.preventDefault()
+      Global().mainRouter.navigate '', trigger: true
 
     serialize: ->
       name:   @$el.find('#name').val()
